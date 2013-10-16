@@ -306,6 +306,13 @@
 
     <script>
       $(document).ready(function() {
+        $('body').keypress(function(event) {
+          if (event.shiftKey && event.keyCode == 13)
+          {
+            $('#run-tests').click();
+          }
+          console.log(event);
+        });
 
         var runTests = function(event) {
           var $form = $('#test-container'),
