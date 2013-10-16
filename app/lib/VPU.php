@@ -422,7 +422,7 @@ class VPU {
         $new_classes = get_declared_classes();
         $tests = array_diff($new_classes, $original_classes);
         foreach ( $tests as $test ) {
-            if ( is_subclass_of($test, 'PHPUnit_Framework_TestCase') ) {
+            if ( is_subclass_of($test, 'PHPUnit_Framework_TestCase') && $test != 'CIUnit_TestCase') {
                 $suite->addTestSuite($test);
             }
         }

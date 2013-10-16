@@ -10,7 +10,9 @@ $config = array(
 
     // The directories where the tests reside
     'test_directories' => array(
-        "{$root}/app/test"
+        "{$root}/app/test",
+        "{$root}/../controllers",
+        "{$root}/../helpers"
     ),
 
 
